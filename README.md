@@ -34,6 +34,7 @@ feat : 새로운 기능 추가
 fix : 버그 수정
 refactor : 코드 리펙토링
 style : CSS 등 사용자 UI 디자인 변경
+chore : 패키지 수정 및 배포 관련
 docs : 문서 수정
 test : 테스트 코드 ( jest, storybook(UI 테스트) )
 ```
