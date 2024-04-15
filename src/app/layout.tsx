@@ -1,8 +1,11 @@
 import './globals.css';
 
-import type { Metadata } from 'next';
+// import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { Metadata } from 'next/types';
 import React from 'react';
+
+import { MSWComponent } from '@/mocks';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,7 +21,9 @@ interface Props {
 const RootLayout = ({ children }: Props) => {
     return (
         <html lang='en'>
-            <body className={inter.className}>{children}</body>
+            <body className={inter.className}>
+                <MSWComponent>{children}</MSWComponent>
+            </body>
         </html>
     );
 };
