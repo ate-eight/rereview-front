@@ -1,13 +1,10 @@
-import './globals.css';
+import '@/styles/index.css';
 
 // import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import { Metadata } from 'next/types';
 import React from 'react';
 
 import { MSWComponent } from '@/mocks';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
     title: 'Create Next App',
@@ -21,7 +18,7 @@ interface Props {
 const RootLayout = ({ children }: Props) => {
     return (
         <html lang='en'>
-            <body className={inter.className}>
+            <body>
                 <MSWComponent>{children}</MSWComponent>
             </body>
         </html>

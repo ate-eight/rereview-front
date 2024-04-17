@@ -17,9 +17,10 @@
                 "name": "next"
             }
         ],
+        "baseUrl": ".",
         "paths": {
             "@/*": ["./src/*"],
-            "@/styled/*": ["./styled-system/*"]
+            "@/styled-system/*": ["./styled-system/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "styled-system"],

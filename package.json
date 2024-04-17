@@ -44,6 +44,7 @@
         "eslint-plugin-simple-import-sort": "^12.1.0",
         "eslint-plugin-storybook": "^0.8.0",
         "msw": "^2.2.13",
+        "path": "^0.12.7",
         "prettier": "^3.2.5",
         "storybook": "^8.0.8",
         "typescript": "5.2.2"
