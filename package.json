@@ -1,25 +1,33 @@
 {
-  "name": "rereview-fontend",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "14.1.4",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.4",
-    "prettier": "^3.2.5",
-    "typescript": "^5"
-  }
+    "name": "rereview-fontend",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev --port 3000",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "test": "jest"
+    },
+    "dependencies": {
+        "next": "14.1.4",
+        "react": "^18",
+        "react-dom": "^18"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^6.4.2",
+        "@testing-library/react": "^14.3.1",
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "eslint": "^8",
+        "eslint-config-next": "14.1.4",
+        "jest": "^29.7.0",
+        "prettier": "^3.2.5",
+        "ts-jest": "^29.1.2",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5",
+        "jest-environment-jsdom": "^29.7.0"
+    }
 }
