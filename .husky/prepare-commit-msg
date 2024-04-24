@@ -1,0 +1,30 @@
+#!/bin/bash
+
+MESSAGE=$(cat $1)
+COMMITFORMAT="(feat|fix|refactor|style|docs|test|other): (.*)"
+
+if ! [[ "$MESSAGE" =~ $COMMITFORMAT ]]; then
+  echo ""
+  echo " Commit Message 포맷을 아래 예시와 같이 지켜주세요."
+  echo " 사용가능한 commit의 Prefix는 아래와 같습니다."
+  echo ""
+  echo "======================= 반드시 콜론(:) 을 붙여야 합니다. ========================="
+  echo ""
+  echo "  feat:             새로운 기능을 추가"
+  echo "  fix:              버그 수정"
+  echo "  style:            CSS 등 사용자 UI 디자인 변경"
+  echo "  docs:             문서 수정"
+  echo "  test:             테스트 코드 ( jest, storybook(UI 테스트) )"
+  echo ""
+  echo "=================================================================================="
+  echo ""
+  echo -e " 아래 EXAMPLE과 같이 첫째 줄에 Prefix와 함께 요약을 남기고 한 줄 개행 후 상세 내용을 작성해주세요. \n Merge Request 시 Overview에 자동으로 Title, Description 작성이 완료됩니다."
+  echo ""
+  echo "================================== E X A M P L E ================================="
+  echo ""
+  echo -e " git commit -m \"Feat: 기능 A 추가\n\n  1. 000파일 추가 \n  2. 2222파일추가\n  3. 00 관련 비즈니스 로직 추가\""
+  echo ""
+  echo "=================================================================================="
+  echo ""
+  exit 1
+fi
