@@ -6,6 +6,8 @@ module.exports = {
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
         'plugin:import/recommended',
+        // prettier & eslint 충돌 방지
+        'prettier',
     ],
     '**/*.{ts,tsx,js,jsx}': settingIgnoreFiles,
     parser: '@typescript-eslint',
