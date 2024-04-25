@@ -18,7 +18,7 @@ if ! [[ "$MESSAGE" =~ $COMMITFORMAT ]]; then
   echo ""
   echo "=================================================================================="
   echo ""
-  echo -e " 아래 EXAMPLE과 같이 첫째 줄에 Prefix와 함께 요약을 남겨주세요! 😊 추가적으로 적을 내용이 있다면 한 줄 개행 후 상세 내용을 작성해주세요. \n Merge Request 시 Overview에 자동으로 Title, Description 작성이 완료됩니다."
+  echo -e " 아래 EXAMPLE과 같이 첫째 줄에 Prefix와 함께 요약을 남겨주세요😊! 추가적으로 적을 내용이 있다면 한 줄 개행 후 상세 내용을 작성해주세요. \n Merge Request 시 Overview에 자동으로 Title, Description 작성이 완료됩니다."
   echo ""
   echo "================================== E X A M P L E ================================="
   echo ""
