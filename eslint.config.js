@@ -1,20 +1,17 @@
-import { ESLint } from 'eslint';
+import { settingIgnoreFiles } from './removeIgnoreFiles';
 
-const removeIgnoredFiles = async (files) => {
-    const eslint = new ESLint();
-    const isIgnored = await Promise.all(
-        files.map((file) => {
-            return eslint.isPathIgnored(file);
-        }),
-    );
-    const filteredFiles = files.filter((_, i) => !isIgnored[i]);
-    return filteredFiles.join(' ');
-};
-
-export default {
-    extends: 'next/core-web-vitals',
-    '**/*.{ts,tsx,js,jsx}': async (files) => {
-        const filesToLint = await removeIgnoredFiles(files);
-        return [`eslint --max-warnings=0 ${filesToLint}`];
+module.exports = {
+    extends: [
+        'next/core-web-vitals',
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/recommended',
+    ],
+    '**/*.{ts,tsx,js,jsx}': settingIgnoreFiles,
+    parser: '@typescript-eslint',
+    parserOptions: {
+        project: true,
+        __tsconfigRootDir: __dirname,
     },
+    root: true,
 };
