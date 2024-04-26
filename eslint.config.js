@@ -5,7 +5,6 @@ module.exports = {
         'next/core-web-vitals',
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended',
-        'plugin:import/recommended',
         // prettier & eslint 충돌 방지
         'prettier',
     ],
